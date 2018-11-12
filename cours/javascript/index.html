@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Etudiants participant au cours.">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Initiation au Javascript - Exploration du Web</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="../../extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Exploration du Web</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../html/">Les bases de HTML5 et CSS3 !</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Initiation au Javascript</a>
+</li>
+                                    
+<li >
+    <a href="../deepweb/">ELU 525: Exploration du web</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contribuer <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../contribuer/contenu/">Définir le contenu</a>
+</li>
+                                    
+<li >
+    <a href="../../contribuer/realiser/">Comment réaliser du contenu</a>
+</li>
+                                    
+<li >
+    <a href="../../contribuer/progresser/">Comment progresser</a>
+</li>
+                                    
+<li >
+    <a href="../../contribuer/outils/">Les outils utilisés</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Déroulé <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../deroule/seance1/">Séance 1</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance2/">Séance 2</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance3/">Séance 3</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance4/">Séance 4</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance5/">Séance 5</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance6/">Séance 6</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../about/about/">A propos</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../html/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../deepweb/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#initiation-au-javascript">Initiation au Javascript</a></li>
+        <li class="main "><a href="#une-definition-generale-de-javascript">Une définition générale de JavaScript</a></li>
+        <li class="main "><a href="#roles-du-html-css-javascript">Rôles du HTML / CSS / JavaScript</a></li>
+        <li class="main "><a href="#notion-de-dom">Notion de DOM</a></li>
+            <li><a href="#presentation-du-dom">Présentation du DOM</a></li>
+            <li><a href="#dom-et-javascript">DOM et JavaScript</a></li>
+        <li class="main "><a href="#premiers-pas-en-javascript">Premiers pas en JavaScript</a></li>
+            <li><a href="#ajouter-des-variables-pour-stocker-les-donnees">Ajouter des variables pour stocker les données</a></li>
+            <li><a href="#les-fonctions">Les Fonctions</a></li>
+            <li><a href="#objet-et-heritage">Objet et héritage</a></li>
+        <li class="main "><a href="#utilisation-du-dom">Utilisation du DOM</a></li>
+            <li><a href="#parcours-initial">Parcours initial</a></li>
+            <li><a href="#parcours-plus-precis">Parcours plus précis</a></li>
+            <li><a href="#alternance-de-deux-images">Alternance de deux images</a></li>
+            <li><a href="#diaporama">Diaporama</a></li>
+        <li class="main "><a href="#a-vous-de-jouer">À VOUS DE JOUER</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="initiation-au-javascript">Initiation au Javascript</h1>
+<p><strong>Prérequis</strong></p>
+<p>Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable en JavaScript, mais vous devriez être familier avec HTML et CSS. Nous vous conseillons de lire les modules concernant HTML et CSS avant d'aller plus loin.</p>
+<h1 id="une-definition-generale-de-javascript">Une définition générale de JavaScript</h1>
+<p>JavaScript (« JS » en abrégé) est un langage de programmation dynamique complet qui, appliqué à un document HTML, peut fournir une interactivité dynamique sur les sites Web.</p>
+<h1 id="roles-du-html-css-javascript">Rôles du HTML / CSS / JavaScript</h1>
+<p><img alt="" src="https://i.imgur.com/njTtKgC.png" /></p>
+<ul>
+<li>HTML est un langage de balisage utilisé pour structurer et donner sens au contenu web. Par exemple : définir des paragraphes, en-têtes et tables de données ou encore intégrer des images ou des vidéos dans une page.</li>
+<li>CSS est un langage de règles de style utilisé pour appliquer un style au contenu HTML. Par exemple : en modifiant la couleur d’arrière-plan ou les polices, ou en disposant le contenu en plusieurs colonnes.</li>
+<li>JavaScript est un langage de programmation qui permet de créer du contenu mis à jour de façon dynamique, de contrôler le contenu multimédia, d’animer des images, à peu près tout. Bon, peut-être pas tout, mais vous pouvez faire bien des choses avec quelques lignes de JavaScript.</li>
+<li>Attention: Le JavaScript est exécuté par le moteur JavaScript du navigateur, après que le HTML et le CSS aient été assemblés et combinés en une page web. Cet enchaînement est nécessaire pour être sûr que la structure et le style de la page seront déjà en place quand le JavaScript commencera son exécution.</li>
+</ul>
+<h1 id="notion-de-dom">Notion de DOM</h1>
+<h2 id="presentation-du-dom">Présentation du DOM</h2>
+<p>Le Document Object Model (DOM) est une interface de programmation pour les documents HTML et XML. Il fournit une page dont des programmes peuvent modifier la structure, son style et son contenu. Cette représentation du document permet de le voir comme un groupe structuré de nœuds et d'objets possédant différentes propriétés et méthodes. Fondamentalement, il relie les pages Web aux scripts ou langages de programmation.</p>
+<p>Une page Web est un document. Celui-ci peut être affiché soit dans la fenêtre du navigateur, soit sous la forme de son code source HTML. Mais il s'agit du même document dans les deux cas. Le modèle objet de document proposé par le DOM fournit une autre manière de représenter, stocker et manipuler ce même document. Le DOM est une représentation entièrement orientée objet de la page Web, et peut être manipulé à l'aide d'un langage de script comme JavaScript.</p>
+<h2 id="dom-et-javascript">DOM et JavaScript</h2>
+<p>Les codes qui sont écrit en JavaScript peuvent utiliser le DOM pour accéder au document et à ses éléments. Le DOM n'est pas un langage de programmation, mais sans lui le langage JavaScript n'aurait aucun modèle ni aucune notion des pages Web, des documents XML, et des éléments pour lesquels il est généralement utilisé. Chaque élément d'un document, que ce soit le document lui-même, ses en-têtes, les tableaux internes au document, les en-têtes de colonnes et le texte contenu dans les cellules de ces tableaux, fait partie du modèle objet de document (DOM) de ce document. Tous ces éléments sont donc accessibles et peuvent être manipulés à l'aide du DOM et d'un langage de script comme JavaScript.</p>
+<p>À l'origine, JavaScript et le DOM étaient fortement liés, mais ils ont fini par évoluer en deux entités distinctes. Le contenu de la page est stocké dans le DOM et on peut y accéder et le manipuler via JavaScript, de la sorte qu'on pourrait écrire cette équation approximative :</p>
+<p>API (page Web ou XML) = DOM + JS (langage de script)</p>
+<p>Le DOM a été conçu pour être indépendant de tout langage de programmation, ce qui rend la représentation structurelle du document disponible à l'aide d'une API simple et cohérente.</p>
+<h1 id="premiers-pas-en-javascript">Premiers pas en JavaScript</h1>
+<h2 id="ajouter-des-variables-pour-stocker-les-donnees">Ajouter des variables pour stocker les données</h2>
+<p>Une variable est un conteneur pour une valeur, tel un nombre à utiliser pour une addition, ou une chaîne devant faire partie d'une phrase. Mais un aspect spécial des variables est que les valeurs contenues peuvent changer. Voyons un exemple simple :</p>
+<pre><code>&lt;button&gt;Pressez moi&lt;/button&gt;
+</code></pre>
+
+<pre><code>var button = document.querySelector('button');
+
+button.onclick = function() {
+  var name = prompt('Quel est votre nom ?');
+  alert('Salut ' + name + ', sympa de vous voir !');
+}
+</code></pre>
+
+<p>Dans cet exemple, presser le bouton déclenche l'exécution de quelques lignes de code. La première ligne affiche à l'écran une boîte priant le lecteur de saisir son nom et stocke la valeur entrée dans une variable. La deuxième affiche un message de bienvenue qui contient le nom, pris dans la valeur de la variable.</p>
+<h2 id="les-fonctions">Les Fonctions</h2>
+<ul>
+<li>Fonctions personnalisées</li>
+</ul>
+<pre><code>function draw() {
+  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  for (var i = 0; i &lt; 100; i++) {
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+    ctx.fill();
+  }
+}
+</code></pre>
+
+<p>Cette fonction dessine 100 cercles aléatoires dans un élément canvas. À chaque fois que nous voulons faire cela, il suffit d'invoquer la fonction comme suit :</p>
+<pre><code>draw();
+</code></pre>
+
+<ul>
+<li>Fonctions anonymes
+ vous pouvez également créer une fonction qui n'a pas de nom :</li>
+</ul>
+<pre><code>function() {
+  alert('hello');
+}
+</code></pre>
+
+<p>Ceci est une fonction anonyme— elle n'a pas de nom ! De plus, elle ne produira pas d'effet par elle-même. Les fonctions anonymes sont généralement utilisées en association avec un gestionnaire d'évènement, comme dans l'exemple suivant qui lance le code inscrit dans la fonction lorsque le bouton associé est cliqué :</p>
+<pre><code>var myButton = document.querySelector('button');
+
+myButton.onclick = function() {
+  alert('hello');
+}
+</code></pre>
+
+<h2 id="objet-et-heritage">Objet et héritage</h2>
+<ul>
+<li>Les bases de l'objet</li>
+</ul>
+<p>Un objet est une collection de données relatives entre elles et/ou de fonctionnalités (qui, souvent, se composent de plusieurs variables et fonctions, appelées propriétés et méthodes quand elles sont dans des objets). Prenons un exemple pour voir à quoi elles ressemblent.</p>
+<p>Comme souvent dans JavaScript, pour créer un objet, on commence avec la définition et l'initialisation d'une variable. Essayez de mettre le code ci-dessous sous le code déjà écrit de votre fichier JavaScript, puis sauvegardez et rafraichissez la page :</p>
+<pre><code>var personne = {};
+</code></pre>
+
+<p>Félicitations, vous avez créé votre premier objet ! Mais c'est un objet vide, on ne peut pas faire grand-chose avec. Modifions notre objet pour qu'il ressemble à ceci :</p>
+<pre><code>var personne = {
+  nom: ['Jean', 'Martin'],
+  age: 32,
+  sexe: 'masculin',
+  interets: ['musique', 'skier'],
+  bio: function() {
+    alert(this.nom[0] + ' ' + this.nom[1] + ' a ' + this.age + ' ans. Il aime ' + this.interets[0] + ' et ' + this.interets[1] + '.');
+  },
+  salutation: function() {
+    alert('Bonjour ! Je suis ' + this.nom[0] + '.');
+  }
+};
+</code></pre>
+
+<p>Vous avez désormais des données et des fonctionnalités dans votre objet, et vous pouvez y accéder avec une une syntaxe simple et claire !</p>
+<pre><code>personne.nom[0]
+personne.age
+personne.interets[1]
+personne.bio()
+personne.salutation()
+</code></pre>
+
+<ul>
+<li>Héritage</li>
+</ul>
+<p>Ci-dessus vous trouverez le constructeur Personne ():</p>
+<pre><code>function Personne(prenom, nom, age, genre, interets) {
+  this.nom = {
+    prenom,
+    nom
+  };
+  this.age = age;
+  this.genre = genre;
+  this.interets = interets;
+};
+</code></pre>
+
+<p>L'ensemble des méthodes est défini dans le prototype :</p>
+<pre><code>Personne.prototype.saluer = function() {
+  alert('Salut! Je suis ' + this.nom.prenom + '.');
+};
+</code></pre>
+
+<p>Essayons de créer une classe Professeur similaire à celle que nous avons utilisée jusqu'ici dans les autres modules d'initiations à l'approche objet. Ainsi, cette classe hérite de Personne mais possède aussi :</p>
+<p>Un nouvel attribut matière — qui contiendra la matière que le professeur enseigne.
+Une méthode saluer un peu plus élaborée, qui sera un peu plus formelle que la méthode de base, cela sera plus approprié, lorsque le professeur s'adrressera à des étudiants, par exemple.</p>
+<p>La première chose à faire est de créer le constructeur Professeur() via l'ajout du code suivant :</p>
+<pre><code>function Professeur(prenom, nom, age, genre, interets, matiere) {
+  Personne.call(this, prenom, nom, age, genre, interets);
+
+  this.matiere = matiere;
+}
+</code></pre>
+
+<p>Cela ressemble beaucoup au constructeur Personne mais il y a quelque chose que nous n'avons pas encore vu : la fonction call(). Cette fonction permet d'appeler une fonction définie ailleurs dans le contexte actuel. Le premier paramètre spécifie la valeur de this que l'on souhaite utiliser lors que l'on utilisera la fonction, les paramètres suivants seront les paramètres qui pourront être passés en arguments lorsqu'elle sera appelée.</p>
+<p>Nous voulons que le constructeur Professeur() aie les mêmes attributs que Personne(), nous les spécifions donc dans l'appel fait via la fonction call().</p>
+<p>La dernière ligne au sein du constructeur sert simplement à définir l'attribut matière que les professeurs enseignent, ce qui n'est pas valable pour les personnes génériques.</p>
+<h1 id="utilisation-du-dom">Utilisation du DOM</h1>
+<p>La variable la plus important quand on veut utiliser le DOM,  c'est <code>document</code>. Elle designe la balise <code>&lt;html&gt;</code> qui est la racine du document. Voyons dans un premier temps des méthodes utiles, puis ensuite leur utilisation.</p>
+<p>L'accès aux balises <code>&lt;head&gt;</code>et <code>&lt;body&gt;</code> depuis le DOM est un peu à part. Il suffit simplement de taper <code>document.head</code> et <code>document.body</code>.</p>
+<p>Prenons comme exmple le code HTML suivant :</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Ma page web&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Ma page web&lt;/h1&gt;
+        &lt;p&gt;Bonjour, je m'appelle Baptiste.&lt;/p&gt;
+        &lt;p&gt;J'habite dans la belle ville de &lt;a href="http://www.lyon.fr"&gt;Lyon&lt;/a&gt;.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Le DOM de ce code peut être représenté de façon hiérarchisé sous la forme d'un arbre.</p>
+<p><img alt="Représentation sous forme d'arbre de la page WEB d'exemple" src="https://s3-eu-west-1.amazonaws.com/sdz-upload/prod/upload/DOM1.DOM" title="Représentation sous forme d'arbre de la page WEB d'exemple" /></p>
+<h2 id="parcours-initial">Parcours initial</h2>
+<p>Il est possible d'accéder à tous les noeuds avec les méthodes <code>childNodes</code> et <code>parentNode</code> qui renvoient, respectivement, un tableau contenant les noeuds fils et le noeud parent d'un noeud choisi. Il est donc théoriquement possible d'accèder à n'importe quel élément de la page depuis la racine avec ces deux méthodes.</p>
+<p>Ainsi, si on reprends l'exemple vu plus haut, pour accèder à la balise <code>&lt;a&gt;</code>contenue dans le dernier noeud <code>&lt;p&gt;</code>, il faudrait écrire <code>document.body.childNodes[5].childNodes[1]</code>. Il y a cependant quelque chose à bien noter. Pour accéder au noeud <code>&lt;p&gt;</code>, on a accedé au 6ème élement de la liste des enfants de <code>body</code> (<code>document.body.childNodes[5]</code>, la numérotation commencant à 0) et non le troisième comme on aurait pu le supposer avec la vue du document sous forme d'arbre. Ceci est dû aux retours à la ligne présent dans le document HTML. En effet ils sont considérés par le DOM comme des noeuds textuels, et donc rentrent en compte dans la liste des noeuds fils.</p>
+<p>Cette méthode d'accès a cependant des gros défauts. En effet elle est sensible à la structure de la page HTML, ce qui veut dire que si on rajoute un élément, on va devoir modifier les index utilisés pour récupérer tel ou tel élément. Ensuite elle manque de lisibilité. En effet, avec <code>document.body.childNodes[5]</code> on a accedé à une balise <code>&lt;p&gt;</code>, mais ce n'est pas forcément évident de savoir ce qu'on récupère. Et puis supposons que l'on souhaite récupérer toutes les balises <code>&lt;p&gt;</code>, c'est pas très évident à faire avec cette méthode.</p>
+<p>Pour ce faire, d'autres méthodes de sélection d'élements existent.</p>
+<h2 id="parcours-plus-precis">Parcours plus précis</h2>
+<p>Plusieurs méthodes existent pour permettre de sélectionner de manière plus fine et plus précise :
+- <code>getElementsByTagName</code> permet de selectionner tous les éléments d'un même tag, par exemple tous les titres de niveau 2 avec <code>document.getElementsByTagName("h2")</code>,
+- <code>getElementsByClassName</code> permet de selectionner tous les éléments d'un possèdant la même classe CSS, par exemple tous les éléments possédant la classe <code>gras</code> avec <code>document.getElementsByClassName("gras")</code>,
+- <code>getElementById</code> permet de selectionner le premier élément qui possède l'identifiant CSS, par exemple l'élément identifié par <code>photoProfil</code> avec <code>document.getElementById("photoProfil")</code>,
+- <code>querySelectorAll</code> permet de sélectionner tous les éléments qui suivent un sélecteur CSS, par exemple tous les éléments de paragraphe qui ont la classe italique avec <code>document.querySelectorAll("p.italique")</code>,
+- <code>querySelector</code> fonctionne de la même manière que <code>querySelectorAll</code> à ceci près qu'il renvoie uniquement le premier élément correspondant au selecteur CSS</p>
+<p>Considérons maintenant un exemple un peu plus complet.</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Les sept merveilles du monde&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Les sept merveilles du monde&lt;/h1&gt;
+        &lt;p&gt;Connaissez-vous les merveilles du monde ?&lt;/p&gt;
+        &lt;div id="contenu"&gt;
+            &lt;h2&gt;Merveilles du monde antique&lt;/h2&gt;
+            &lt;p&gt;Cette liste nous vient de l'Antiquité.&lt;/p&gt;
+            &lt;ul class="merveilles" id="antiques"&gt;
+                &lt;li class="existe"&gt;La pyramide de Khéops&lt;/li&gt;
+                &lt;li&gt;Les jardins suspendus de Babylone&lt;/li&gt;
+                &lt;li&gt;La statue de Zeus&lt;/li&gt;
+                &lt;li&gt;Le temple d'Artémis&lt;/li&gt;
+                &lt;li&gt;Le mausolée d'Halicarnasse&lt;/li&gt;
+                &lt;li&gt;Le Colosse de Rhodes&lt;/li&gt;
+                &lt;li&gt;Le phare d'Alexandrie&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h2&gt;Nouvelles merveilles du monde&lt;/h2&gt;
+            &lt;p&gt;Cette liste a été établie en 2009 à la suite d'un vote par Internet.&lt;/p&gt;
+            &lt;ul class="merveilles" id="nouvelles"&gt;
+                &lt;li class="existe"&gt;La Grande Muraille de Chine&lt;/li&gt;
+                &lt;li class="existe"&gt;Pétra&lt;/li&gt;
+                &lt;Li class="existe"&gt;Le Christ du Corcovado&lt;/Li&gt;
+                &lt;Li class="existe"&gt;Machu Picchu&lt;/Li&gt;
+                &lt;li class="existe"&gt;Chichén Itzá&lt;/li&gt;
+                &lt;li class="existe"&gt;Le Colisée&lt;/li&gt;
+                &lt;li class="existe"&gt;Le Taj Mahal&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;h2&gt;Références&lt;/h2&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="https://fr.wikipedia.org/wiki/Sept_merveilles_du_monde"&gt;Merveilles antiques&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="https://fr.wikipedia.org/wiki/Sept_nouvelles_merveilles_du_monde"&gt;Nouvelles merveilles&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;script src="../js/cours.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="alternance-de-deux-images">Alternance de deux images</h2>
+<ul>
+<li>Créer une page html5 contenant une image.</li>
+<li>Programmer en JavaScript une alternance entre cette image et une autre, toutes les deux secondes.</li>
+<li>Ajouter un bouton et le code JavaScript associé pour arrêter ce défilement.</li>
+<li>Ajouter un bouton et le code JavaScript associé pour le reprendre</li>
+</ul>
+<pre><code>1: &lt;!DOCTYPE html&gt;
+2: &lt;html lang=&quot;fr&quot;&gt;
+3: &lt;head&gt;
+4: &lt;title&gt;Actions utilisateur et JavaScript&lt;/title&gt;
+5: &lt;meta charset=&quot;utf-8&quot; /&gt;
+6: &lt;link rel=&quot;stylesheet&quot; href=&quot;idemm.css&quot; /&gt;
+7: &lt;script&gt;
+8: var alecran = 'unchat';
+9: function diaporama () {
+10:   if (alecran == 'unchat') {
+11:     document.getElementById('diapo').setAttribute('src','images/chien.jpg');
+12:     alecran = 'unchien';
+13:   } else {
+14:     document.getElementById('diapo').setAttribute('src','images/chat.jpg');
+15:     alecran = 'unchat';
+16:   }
+17: }
+18: &lt;/script&gt;
+19: &lt;/head&gt;
+20: 
+21: &lt;body onload=&quot;chienchat = setInterval('diaporama();',2000);&quot;&gt;
+22: 
+23: &lt;h1&gt;Actions utilisateur et JavaScript&lt;/h1&gt;
+24: 
+25: &lt;h2&gt;Diaporama automatique&lt;/h2&gt;
+26: 
+27: &lt;div class=&quot;illustration&quot;&gt;
+28: &lt;img id=&quot;diapo&quot; src=&quot;images/chat.jpg&quot; alt=&quot;un chat&quot; height=&quot;200&quot; /&gt;
+29: &lt;/div&gt;
+30: 
+31: &lt;button onclick=&quot;clearInterval(chienchat);&quot;&gt;stop!&lt;/button&gt;
+32: 
+33: &lt;button onclick=&quot;chienchat = setInterval('diaporama();',2000);&quot;&gt;on y retourne!&lt;/button&gt;
+34: 
+35: 
+36: &lt;/body&gt;
+37: &lt;/html&gt;
+</code></pre>
+
+<p>Vous y trouverez la démonstration au lien suivant: <a href="http://www.grappa.univ-lille3.fr/~torre/Enseignement/tp/JavaScript/seances/tp4.html">[Démo]</a>
+Seul le code JavaScript sera commenté.Pour le code Html voir cours sur HTML et CSS.</p>
+<pre><code>&lt;script&gt;
+8: var alecran = 'unchat';
+...
+
+18: &lt;/script&gt;
+</code></pre>
+
+<p>Nous commencons par la déclaration d'une variable qui pour nom alecran et pour valeur la chaine de caractère 'unchat'.  </p>
+<pre><code>&lt;script&gt;
+...
+
+9: function diaporama () {
+10:   if (alecran == 'unchat') {
+11:     document.getElementById('diapo').setAttribute('src','images/chien.jpg');
+12:     alecran = 'unchien';
+13:   } else {
+14:     document.getElementById('diapo').setAttribute('src','images/chat.jpg');
+15:     alecran = 'unchat';
+16:   }
+17: }
+18: &lt;/script&gt;
+</code></pre>
+
+<p>Il s'agit d'une fonction diaporama() comme vous pouvez le constater. si l'objet alecran prend la valeur 'unchat' alors on récupère l'élément identifié par 'diapo' et l'aide de setAttribute('src','images/chien.jpg') nous pourrions afficher l'image du chien qui est sur le lien 'images/chien.jpg'. Nous avons le procéssus inverse lorsque alecran prend la valeur 'unchien'.</p>
+<h2 id="diaporama">Diaporama</h2>
+<ul>
+<li>Placer des noms d'images dans un tableau JavaScript.</li>
+<li>Programmer l'affichage une par une de ces images dirigés par deux boutons, un précédent, un suivant</li>
+</ul>
+<pre><code>1: &lt;!DOCTYPE html&gt;
+2: &lt;html lang=&quot;fr&quot;&gt;
+3: &lt;head&gt;
+4: &lt;title&gt;Actions utilisateur et JavaScript&lt;/title&gt;
+5: &lt;meta charset=&quot;utf-8&quot; /&gt;
+6: &lt;link rel=&quot;stylesheet&quot; href=&quot;idemm.css&quot; /&gt;
+7: &lt;script&gt;
+8: var mesphotos = ['chat.jpg','chien.jpg','sanglier.jpg','lapin.jpg'];
+9: var image_en_cours = 0;
+10: function suivante () {
+11:   image_en_cours = image_en_cours + 1;
+12:   if (image_en_cours == mesphotos.length) {
+13:     image_en_cours = 0;
+14:   }
+15:   document.getElementById('ecran').src = 'images/'+mesphotos[image_en_cours];
+16: }
+17: function precedente () {
+18:   image_en_cours = image_en_cours - 1;
+19:   if (image_en_cours &lt; 0) {
+20:     image_en_cours = mesphotos.length-1;
+21:   }
+22:   document.getElementById('ecran').src = 'images/'+mesphotos[image_en_cours];
+23: }
+24: &lt;/script&gt;
+25: &lt;/head&gt;
+26: 
+27: &lt;body&gt;
+28: 
+29: &lt;h1&gt;Actions utilisateur et JavaScript&lt;/h1&gt;
+30: 
+31: &lt;h2&gt;Diaporama manuel&lt;/h2&gt;
+32: 
+33: &lt;div class=&quot;illustration&quot;&gt;
+34: &lt;img id=&quot;ecran&quot; src=&quot;images/chat.jpg&quot; alt=&quot;un chat&quot; height=&quot;200&quot; /&gt;
+35: &lt;/div&gt;
+36: 
+37: &lt;button onclick=&quot;precedente();&quot;&gt;image précédente&lt;/button&gt;
+38: &lt;button onclick=&quot;suivante();&quot;&gt;image suivante&lt;/button&gt;
+39: 
+40: &lt;/body&gt;
+41: &lt;/html&gt;
+42: 
+</code></pre>
+
+<p>Vous y trouverez la démonstration au lien suivant: <a href="http://www.grappa.univ-lille3.fr/~torre/Enseignement/tp/JavaScript/seances/tp4bis.html">Démo</a></p>
+<p>NB: il y aucune différence entre <code>document.getElementById('ecran').src=""</code> et <code>document.getElementById('diapo').setAttribute('src','images/chat.jpg');</code>, ils ont tous les deux le même rôle. Le ".src=" est une mannière plus simple d'écrire le .setAttribute("","")".</p>
+<h1 id="a-vous-de-jouer">À VOUS DE JOUER</h1>
+<p>Dans cette partie il sera question de faire un script en JavaScript qui permettra de défiler chaque 5 secondes des images(au moins 5 images contenues dans un tableau). </p>
+<ul>
+<li>Placer des noms d’images dans un tableau JavaScript</li>
+<li>Programmer l’affichage une par une de ces images qui apparaîtront les unes à suite des autres chaque 5 secondes.</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
