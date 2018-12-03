@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Etudiants participant au cours.">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Django le framework ! - Exploration du Web</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="../../extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Exploration du Web</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../html/">Les bases de HTML5 et CSS3 !</a>
+</li>
+                                    
+<li >
+    <a href="../Recherche_sur_le_Web/">Recherche sur le Web</a>
+</li>
+                                    
+<li >
+    <a href="../javascript/">Initiation au Javascript</a>
+</li>
+                                    
+<li >
+    <a href="../deepweb/">Cours sur le web profond</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Django le framework !</a>
+</li>
+                                    
+<li >
+    <a href="../">Sessions précédentes</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contribuer <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../contribuer/contenu/">Définir le contenu</a>
+</li>
+                                    
+<li >
+    <a href="../../contribuer/realiser/">Comment réaliser du contenu</a>
+</li>
+                                    
+<li >
+    <a href="../../contribuer/progresser/">Comment progresser</a>
+</li>
+                                    
+<li >
+    <a href="../../contribuer/outils/">Les outils utilisés</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Déroulé <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../deroule/seance1/">Séance 1</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance2/">Séance 2</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance3/">Séance 3</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance4/">Séance 4</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance5/">Séance 5</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance6/">Séance 6</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance9/">Séance 9</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance12/">Séance 12</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../about/about/">A propos</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../deepweb/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#django-le-framework">Django le framework !</a></li>
+        <li class="main "><a href="#i-introduction-a-django">I - Introduction à Django</a></li>
+            <li><a href="#1-quest-ce-quun-framework">1 - Qu'est ce qu'un framework ?</a></li>
+            <li><a href="#2-types-de-frameworks">2 - Types de frameworks</a></li>
+            <li><a href="#3-frameworks-quels-avantages-et-quels-inconvenients">3 - Frameworks : Quels avantages et quels inconvénients ?</a></li>
+            <li><a href="#4-django-cest-quoi">4 - Django, c'est quoi ?</a></li>
+            <li><a href="#5-mvcmvt">5-MVC/MVT:</a></li>
+        <li class="main "><a href="#ii-creer-son-premier-projet-sur-django">II - Créer son premier projet sur Django</a></li>
+            <li><a href="#1-creer-un-projet-et-une-premiere-application">1 - Créer un projet et une première application</a></li>
+            <li><a href="#2-conception-des-premiers-modeles">2 - Conception des premiers modèles</a></li>
+            <li><a href="#3-le-traitement-des-donnees-avec-les-vues-et-le-routage-durl">3 - Le traitement des données avec les vues et le routage d'URL</a></li>
+            <li><a href="#4-presentation-du-contenu-avec-les-templates">4 - Présentation du contenu avec les templates</a></li>
+            <li><a href="#5-administration-du-projet-avec-le-scaffolding">5 - Administration du projet avec le scaffolding</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="django-le-framework">Django le framework !</h1>
+<ol>
+<li>Introduction à Django<ol>
+<li>Qu’est ce qu’un framework ?</li>
+<li>Types de frameworks</li>
+<li>Frameworks : Quels avantages et quels inconvénients ?</li>
+<li>Django, c'est quoi ?</li>
+<li>MVC/MVT</li>
+</ol>
+</li>
+<li>Créer son premier projet sur Django<ol>
+<li>Créer un projet et une première application</li>
+<li>Conception des premiers modèles</li>
+<li>Le traitement des données avec les vues et le routage d'URL</li>
+<li>Présentation du contenu avec les templates</li>
+<li>Administration du projet avec le scaffolding</li>
+</ol>
+</li>
+</ol>
+<h1 id="i-introduction-a-django">I - Introduction à Django</h1>
+<h2 id="1-quest-ce-quun-framework">1 - Qu'est ce qu'un framework ?</h2>
+<p>Un framework est l'ensemble de composants logiciels à la base d'un logiciel ou d'une application( bibliothèques,classes, helpers..etc).Il décrit les types de programmes à concevoir et leur mode d'interaction.<br />
+Un framework permet de <strong>simplifier le travail des développeurs informatiques</strong> en offrant une architecture réutilisable et adaptée à leurs besoins. En outre, il peut être amélioré par l'expérience des développeurs.Les frameworks sont utilisés pour développer une application mobile, un site web, un jeu,..etc </p>
+<h2 id="2-types-de-frameworks">2 - Types de frameworks</h2>
+<p>On peut classer les frameworks de la manière suivante:<br />
+<em> <strong>Frameworks d'infrastructure système</strong> utilisés pour le développement des systèmes d'exploitation et des interfaces graphiques (Microsoft .Net, Apache Struts,...).
+</em> <strong>Frameworks d'intégration intergicielle</strong> permettent l'interconnexion de systèmes divers.
+<em> <strong>Frameworks d'entreprises</strong> sont spécifiques aux applications utilisées par les entreprises. 
+</em> <strong>Frameworks de gestion de contenu</strong> sont les fondations d'un système de gestion de contenu — pour la création, la collecte, le classement, le stockage et la publication de « biens numérisés ».</p>
+<p>Source : <a href="https://fr.wikipedia.org/wiki/Framework">Wikipedia</a></p>
+<h2 id="3-frameworks-quels-avantages-et-quels-inconvenients">3 - Frameworks : Quels avantages et quels inconvénients ?</h2>
+<p>En utilisant les frameworks, les développeurs codent de façon homogène. Ainsi, quand un développeur rejoint un projet basé sur un framework qu'il connaît, la compréhension de l'architecture lui sera plus simple et plus rapide que s'il avait dû s'approprier les outils au préalable. De plus, l'adoption d'une structure commune garantit un code organisé et facilement réutilisable. </p>
+<p>En revanche, les frameworks doivent être souples et modulables afin qu'ils soient adaptés à différents projets. Certains nécessitent cependant un temps d'apprentissage plus long que d'autres. </p>
+<p>Source: <a href="https://openclassrooms.com/fr/courses/1871271-developpez-votre-site-web-avec-le-framework-django/1871361-creez-vos-applications-web-avec-django">Openclassrooms</a>  </p>
+<h2 id="4-django-cest-quoi">4 - Django, c'est quoi ?</h2>
+<p>Django est l'un des  frameworks applicatifs Python destinés au développement d’applications web. Créé en 2003 dans une agence de presse, Lawrence Journal-World, le framework est proposé au grand public deux ans plus tard. En 2008, la fondation Django Software a été créée. Aujourd'hui, Django est très populaire. Il est utilisé dans des applications web très célèbres comme <em>Instagram</em> ou <em>Pinterest</em>.  </p>
+<p>Django permet le développement rapide de meilleures et plus performantes applications web. Il automatise des tâches répétitives  telles que l'écriture de requêtes destinées à une base de données. Il propose d'autres fonctionnalités comme une bibliothèque de traduction on un espace membres. </p>
+<h2 id="5-mvcmvt">5-<strong>MVC/MVT</strong>:</h2>
+<p>Le Modèle-vue-contrôleur ou MVC est un type d'architecture logicielle destiné aux interfaces graphiques lancé en 1978 et très populaire pour les applications web. Le motif est composé de trois types de modules assurant différents rôles:<br />
+   * Un modèle (Model) contient les données à afficher.
+   * Une vue (View) contient la présentation de l'interface graphique.<br />
+   * Un contrôleur (Controller) contient la logique concernant les actions effectuées par l'utilisateur. Source : <a href="https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur">Wikipédia</a><br />
+<img alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/MVC_Diagram_%28Model-View-Controller%29.svg" /><br />
+   source:<a href="https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur">MVC</a><br />
+   Django utilise l'architecture MVT (modèle-vue-template)qui s'inspire de MVC: <br />
+   * Le <strong>modèle</strong> interagit avec une base de données. Un <strong>ORM</strong> (Object Relational Mapping) traduit les réponses à une requête <a href="file:///C:/Users/admin/Documents/EGDownloads/Sql_1_Cours.pdf">SQL</a> ( langage de consultation de base de données) en <strong>objets Python</strong> exploitables par le programme.Tous les modèles sont réunis dans un fichier python <strong>models.py</strong>.<br />
+   * La <strong>vue</strong> reçoit <a href="https://openclassrooms.com/fr/courses/1118811-les-requetes-http">une requête HTTP</a> et renvoie une réponse HTTP convenable (par exemple si la requête est une interaction avec une base de données, la vue appelle un modèle pour récupérer les items demandés).Les vues se trouvent dans le fichier <strong>views.py</strong>
+   * Le <strong>template</strong> est un fichier <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1604361-votre-premiere-page-web-en-html">HTML</a> récupéré par la vue et envoyé au visiteur.<br />
+   La figure ci-dessous montre comment les différents composants de l'architecture MVC interagissent pour répondre à la requête d'un utilisateur.<br />
+<img alt="" src="https://camo.githubusercontent.com/2fd581466b72e4b92e5893ea842b0ee085fff68d/68747470733a2f2f646f63732e676f6f676c652e636f6d2f64726177696e67732f642f314c456f30356854445f45435a355647356f664d6468327434445f4c6769416e626c752d65305435386645342f7075623f773d39363026683d373230" /><br />
+   source: <a href="https://github.com/emencia/emencia-django-training/wiki/Mod%C3%A8le-MVT">github</a>  </p>
+<h1 id="ii-creer-son-premier-projet-sur-django">II - Créer son premier projet sur Django</h1>
+<h2 id="1-creer-un-projet-et-une-premiere-application">1 - Créer un projet et une première application</h2>
+<p>Après avoir installé Django, nous pouvons créer un nouveau projet.
+La première étape est de créer un répertoire qui contient des fichiers utiles au fonctionnement du projet. Pour créer ce répertoire, on tape la commande suivante:</p>
+<pre><code class="shell">$ django-admin.py startproject mon_projet
+</code></pre>
+
+<p>Ce répertoire <em>mon_projet</em> contient un script <code>manage.py</code> qui permettra d'exécuter des commandes utiles au sein du projet. Il contient aussi des fichiers propres au projet: <code>settings.py</code> contient la configuration globale du projet, <code>urls.py</code> est le contrôleur frontal du projet et <code>wsgi.py</code> est un fichier de configuration relatif au serveur qui executera le projet.
+Nous pouvons vérifier que le projet fonctionne avec la commande :  </p>
+<pre><code class="shell">$ python manage.py runserver
+</code></pre>
+
+<p>Cette commande lance le serveur de développement Django et affiche des informations dont l'URL du projet Django que nous venons de créer.</p>
+<p><strong>Création d'une application au sein du projet</strong></p>
+<p>Créer une application est très simple. Il faut tout d'abord se placer dans le répertoire du projet puis taper la commande suivante :</p>
+<pre><code class="shell">$ django-admin.py startapp chistera
+</code></pre>
+
+<p>Un répertoire <em>chistera</em> a été créé dans le répertoire du projet et contient plusieurs fichiers: le fichier <code>models.py</code> qui est destiné à accueillir les modèles de l'application, le fichier <code>views.py</code> qui sert à accueillir les contrôleurs de l'application et le fichier <code>tests.py</code> qui va accueillir les tests.</p>
+<h2 id="2-conception-des-premiers-modeles">2 - Conception des premiers modèles</h2>
+<p>Les modèles Django sont des classes héritées de la classe <code>Model</code> du framework de base, qui leur confère ainsi les propriétés et méhodes relatives aux modèles. 
+Afin de créer notre premier modèle, il nous faut démarrer dans le fichier <code>models.py</code> de l'application (voir point précédent pour la création d'une application). </p>
+<pre><code class="python">from django.db import models
+
+class MonPremierModel(models.Model):
+    &quot;&quot;&quot;
+    La documentation de mon modèle.
+    &quot;&quot;&quot;
+    un_exemple_de_texte = models.CharField(max_length=150)
+</code></pre>
+
+<p>Lorsque vous créez un modèle Django, vous utilisez le système d'ORM du framework, ce qui signifie que Django vous propose certains types de champs disponibles pour la création de vos modèles. On ne les listera pas ici, mais on peut citer pour exemple <em>CharField</em> (pour un champ de texte, mappé vers un VARCHAR en BDD) ou encore <em>ForeignKey</em> (pour une référence à un objet d'un autre modèle.)</p>
+<p>Pour plus d'informations concernant les champs utilisables pour la création d'un modèle, n'hésitez pas à suivre la documentation officielle de Django, section <em>Model field reference</em>.</p>
+<p>Pour chaque type de champ, on peut lister un grand nombre d'<em>options</em> différentes, qu'on ne listera pas non plus ici.
+Pour y voir plus clair, voici un exemple de déclaration de modèle utilisant certaines options:</p>
+<pre><code class="python">from django.db import models
+
+class MonPremierModel(models.Model):
+    un_exemple_de_texte = models.CharField(max_length=150, null=True, blank=True, default=&quot;Coucou&quot;)
+</code></pre>
+
+<p>Désormais, vous connaissez les principales caractéristiques des modèles.</p>
+<h2 id="3-le-traitement-des-donnees-avec-les-vues-et-le-routage-durl">3 - Le traitement des données avec les vues et le routage d'URL</h2>
+<h3 id="ecriture-des-controleurs">Ecriture des contrôleurs</h3>
+<p>En Django, on écrit tous les contrôleurs d'une application dans un seul fichier, appelé <code>views.py</code>. Lors de la création de notre application chistera avec la commande djangoadmin.py (voir partie II-1), Django a placé un fichier <code>views.py</code> vide dans le répertoire de l'application que nous pouvons compléter.</p>
+<p>Notre fichier <code>urls.py</code> définit les routes vers deux contrôleurs:</p>
+<pre><code class="python">from django.conf.urls import patterns, url
+
+urlpatterns = patterns('',
+    url(r'^dashboard/$', 'chistera.views.dashboard', name='dashboard'),
+    url(r'^backlog/(?P&lt;backlog_id&gt;[0-9]+)/$', 'chistera.views.backlog', name='backlog'),
+)
+</code></pre>
+
+<p>Ainsi il y a deux destinations à définir: un contrôleur dashboard et un contrôleur backlog. Ces deux contrôleurs vont avoir besoin de modèles, il faut donc les importer dans le fichier <code>views.py</code> :  </p>
+<pre><code class="python">from chistera.models import *
+</code></pre>
+
+<p><strong>Ecriture du contrôleur (vue) dashboard</strong>  </p>
+<p>Ce contrôleur doit récupérer les équipes et les backlogs pour pouvoir invoquer ensuite une vue (template) qui les affichera à l'écran. Pour celà on écrit la déclaration suivante:  </p>
+<pre><code class="python">from django.shortcuts import render_to_response
+
+from chistera.models import *
+
+@login_required
+def dashboard(request):
+    backlogs = ProductBacklog.objects.all()
+    teams = Team.objects.all()
+    return render_to_response('chistera/dashboard.html', {'backlogs': backlogs, 'teams': teams})
+
+ ```
+En Django, tous les contrôleurs doivent retourner un objet de type *HttpResponse*. Ce sont eux qui seront transmis aux templates. La dernière ligne de la fonction permet de créer cet objet. Après celà, les contrôleurs seront en place et nous pourrons afficher la page  correspondant au contrôleur dans un navigateur. De plus, notre contrôleur sera &quot;protégé&quot; par le décorateur `@login_required`. Seules les requêtes provenant d'utilisateurs authentifiés pourront aboutir.  
+
+__Ecriture du contrôleur (vue) backlog__  
+
+De même nous allons écrire dans le fichier views.py la fonction contrôleur backlog.  
+
+```python
+@login_required
+def backlog(request, backlog_id):
+    backlog = get_object_or_404(ProductBacklog, pk=backlog_id)
+    stories = UserStory.objects.filter(product_backlog=backlog)
+    return render_to_response('chistera/backlog.html', {'backlog': backlog, 'stories': stories})
+
+</code></pre>
+
+<p>La différence ici est que nous avons une variable nommée <code>backlog_id</code> qui est automatiquement passée au contrôleur <code>backlog</code> par Django.<br />
+De plus une fonction <code>get_object_or_404</code> retourne une erreur 404 si l'objet est introuvable.  </p>
+<h3 id="routage-durl-ecriture-du-controleur-frontal">Routage d'URL: écriture du contrôleur frontal</h3>
+<p>L'idée ici est d'associer des patterns d'URL aux contrôleurs d'une application. C'est ce que va faire le contrôleur frontal. Chaque projet dispose d'un contrôleur frontal. Dans le fichier <code>urls.py</code>, on écrit:  </p>
+<pre><code class="python">from django.conf.urls import patterns, include, url
+
+from django.contrib import admin
+admin.autodiscover()
+
+urlpatterns = patterns('',
+    url(r'^admin/', include(admin.site.urls)),
+)
+</code></pre>
+
+<p>Cela permet de dire à Django : « Je veux que tu rediriges toutes les requêtes faites à la racine (^) vers le contrôleur frontal de l'application chistera  qui est défini dans le module <em>chistera.urls</em> ».  </p>
+<p>Il ne reste plus qu'à écrire les règles de routage dans le fichier <code>urls.py</code> :  </p>
+<pre><code class="python">from django.conf.urls import patterns, url
+
+urlpatterns = patterns('',
+    url(r'^dashboard/$', 'chistera.views.dashboard', name='dashboard'),
+    url(r'^backlog/(?P&lt;backlog_id&gt;[0-9]+)/$', 'chistera.views.backlog', name='backlog'),
+)
+</code></pre>
+
+<p>Le contrôleur frontal est donc en place et permet le routage d'URL.</p>
+<h2 id="4-presentation-du-contenu-avec-les-templates">4 - Présentation du contenu avec les templates</h2>
+<h2 id="5-administration-du-projet-avec-le-scaffolding">5 - Administration du projet avec le scaffolding</h2>
+<h3 id="installation">Installation</h3>
+<p>Une des grandes forces de Django est de proposer la création très rapide d'une interface permettant d'administrer son site. Pour cela on va utiliser les fonctionnalités de <em>scaffolding</em> (littéralement <em>échaffaudage</em> ou <em>structure</em>) de Django.</p>
+<p>La première étape est d'ajouter l'application d'administration dans la liste des applications utilisées dans notre projet. Pour ce faire il faut modifier la variable <code>INSTALLED_APPS</code> dans le ficher <code>settings.py</code> du projet :</p>
+<pre><code class="python">INSTALLED_APPS = (
+    ...,
+    'django.contrib.admin',
+    ...,
+)
+</code></pre>
+
+<p>Maintenant que l'application est active, il faut permettre son accès. Pour ce faire il faut rajouter une route pointant vers l'interface d'administration. Modifiez le fichier <code>urls.py</code> du projet (et non de l'application) pour rajouter ces lignes :</p>
+<pre><code class="python">from django.contrib import admin
+
+admin.autodiscover()
+
+urlpatterns = [
+    ...,
+    path('admin/', admin.site.urls),
+    ...,
+]
+</code></pre>
+
+<p>Ne vous attardez pas trop sur la ligne <code>admin.autodiscover()</code>, il nous permet simplement <em>"d'ajouter"</em> tous nos modèles dans l'interface d'administration.</p>
+<p>Afin de pouvoir utiliser notre interface, il nous faut créer un utilisateur qui a les droits d'accès à l'interface. Dans une console, se placer dans le dossier de notre projet, là où se trouve le fichier <code>manage.py</code> et taper : <code>python3 manage.py createsuperuser</code> puis suivez les étapes affichées. Une fois cette étape effectuée, vous pouvez lancer le serveur pour tester votre interface. Vous devriez arriver sur une interface comme celle-ci :
+<img alt="Connexion à la plateforme d'administration" src="http://formation-django.fr/media/images/cms/authentification-interface-administration.png" />
+Source : <a href="http://formation-django.fr/framework-django/scaffolding/mise-en-oeuvre.html">formation-django.fr</a></p>
+<p>Django gérant lui même toutes les questions de sécurité et d'authentification, il vous suffit de vous connecter avec les identifiants créés précédemment et vous avez accès à l'interface de gestion.
+<img alt="Interface d'administration" src="http://formation-django.fr/media/images/cms/django-scaffolding-accueil.png" />
+Source : <a href="http://formation-django.fr/framework-django/scaffolding/mise-en-oeuvre.html">formation-django.fr</a></p>
+<p>On a accès à la gestion des groupes d'utilisateurs, ainsi qu'au utilisateurs eux-mêmes, mais pas à la gestion de notre application en elle même, ce qui rends l'interface peu utile. Rajoutons donc nos modèles dans l'administration.</p>
+<p>Pour ce faire, il faut modifier le fichier <code>admin.py</code> de notre application pour rajouter les lignes suivantes :</p>
+<pre><code class="python">from django.contrib import admin
+from chistera.models import *
+
+admin.site.register(Team)
+admin.site.register(Project)
+admin.site.register(ProductBacklog)
+admin.site.register(Sprint)
+admin.site.register(UserStory)
+</code></pre>
+
+<p>(L'importation du module à la deuxième lignes ainsi que les modèles utilisé sont à adapter selon votre application).</p>
+<p>En rafraichissant simplement la page d'administration (avec le serveur lancé), nous voyons tous nos modèles dans l'interface : 
+<img alt="Interface d'administration mise à jour avec les modèles" src="http://formation-django.fr/media/images/cms/django-application-admin.png" />
+Source : <a href="http://formation-django.fr/framework-django/scaffolding/mise-en-oeuvre.html">formation-django.fr</a></p>
+<h3 id="parametrage-avance">Paramétrage avancé</h3>
+<p>Vous l'avez peut-être remarqué, l'interface est en anglais par défaut. Une des grandes qualités de Django est sa gestion des différentes langues et des différents fuseaux horaires. Pour en profiter, il faut modifier les variables <code>TIME_ZONE</code> et <code>LANGUAGE_CODE</code> dans le fichier <code>settings.py</code> du projet :</p>
+<pre><code class="python">TIME_ZONE = 'Europe/Paris'
+LANGUAGE_CODE = 'fr-FR'
+</code></pre>
+
+<p>Avec ceci, notre application est en français, et utilise le fuseau horaire de Paris. Cependant les noms des modèles sont toujours en anglais. Ceci vient du fait que nos modèles sont nommés en anglais et que Django n'a rien pour <em>deviner</em> la traduction, et utilise simplement le Camel Case (voir <a href="https://fr.wikipedia.org/wiki/Camel_case">Camel Case sur Wikipédia</a> pour plus d'explications) pour <em>deviner</em> le nom des modèles. Pour traduire les noms affichés de nos modèles, il y a deux possibilités :
+1. On change le nom de la classe qui définie le modèle dans le fichier <code>models.py</code>
+2. On utilise une classe interne dans notre modèle où l'on définit les noms à utiliser pour l'interface d'administration</p>
+<p>La première solution n'est pas à préférer parce que si on est ammené à changer le nom d'usage de notre modèle par la suite, il serait à changer dans tous les fichiers où on l'utilise ce qui peut poser des problèmes. </p>
+<p>Pour implémenter la deuxième solution, il suffit de rajouter dans le modèle que l'on souhaite <em>traduire</em> une classe interne de la manière suivante :</p>
+<pre><code class="python">class ProductBacklog(models.Model):
+    # ...
+
+    class Meta:
+        verbose_name = 'Backlog de produit'
+        verbose_name_plural = 'Backlogs de produit'
+</code></pre>
+
+<p>Ainsi on a la possibilité de définir la façon dont s'affiche notre modèle, à l'infinitif comme au pluriel.</p>
+<p>L'étape suivante est d'adapter l'affichage des listes d'enregistrement à nos besoins.</p>
+<p>Si on retourne sur notre interface d'administration, en cliquant sur un modèle, on tombe sur une liste assez similaire à la suivante : 
+<img alt="Extrait de l'interface d'administration" src="http://formation-django.fr/media/images/cms/django-admin-liste-par-defaut.png" />
+Source <a href="http://formation-django.fr/framework-django/scaffolding/parametrage-avance-interface-admin.html">formation-django.fr</a></p>
+<p>La visualisation est assez classique avec une liste des éléments ainsi que la possibilité de rechercher, d'ajouter ou de supprimer des éléments.</p>
+<p>Le seul problème est que notre liste n'est pas très détaillée, affiche un nom étrange pour nos entrées et qu'il manque des fonctionnalités de tri ou de recherche. Voyons comment remédier à tous ces problèmes.</p>
+<p>Notre premier point à régler est que Django n'affiche plus <em>Project object</em>, mais bien le nom de notre projet. Pour ce faire retournons dans notre fichier <code>models.py</code> et rajoutons une méthode <code>__str__()</code> qui nous permettra de récupérer facilement le nom de notre projet.</p>
+<pre><code class="python">class Project(models.Model):
+    name = models.CharField(max_length=150)
+    # ...
+
+    def __str__(self):
+        return self.name
+</code></pre>
+
+<p>L'affichage est déjà un peu plus clair : 
+<img alt="Affichage des projets" src="http://www.formation-django.fr/media/images/cms/django-admin-personnalisation-noms-objets.png" />
+Source <a href="http://formation-django.fr/framework-django/scaffolding/parametrage-avance-interface-admin.html">formation-django.fr</a></p>
+<p>Pour l'instant, dans la liste on voit uniquement le noms des projets. Cela dit il pourrait être intéressant de voir d'autres infos sur les projets, comme l'équipe assignée. Pour ce faire, il faut modifier le fichier <code>admin.py</code>.</p>
+<p>Pour rappel, il ressemble à ceci : </p>
+<pre><code class="python">from django.contrib import admin
+from chistera.models import *
+
+admin.site.register(Team)
+admin.site.register(Project)
+admin.site.register(ProductBacklog)
+admin.site.register(Sprint)
+admin.site.register(UserStory)
+</code></pre>
+
+<p>Les cinq dernières lignes reviennent simplement à daire à Django : « Je souhaite que tu prennes en charge les modèles Team, Project, ProductBacklog, Sprint et UserStory dans l'interface d'administration de mon application : fais au mieux ! ». En faisant ceci, Django va définir lui même les informations à afficher dans la liste ainsi que la possibilité de faire un tri ou non, etc...</p>
+<p>Il est possible de choisir tous ces paramètres nous même, et donc de manière plus précise. Django offre cette possibilité en créant un modèle spécifique à notre interface d'administration où l'on va renseigner les paramètres que l'on veut pour personnaliser notre interface à notre manière.</p>
+<p>Par exemple, pour afficher, en plus du nom, l'équipe assignée à un projet dans notre modèle de projet il faut créer une classe <code>ProjectAdmin</code> (ou un autre nom tout aussi parlant) qui hérite de la classe <code>admin.ModelAdmin</code> et a comme attribut <code>list_display = ('name', 'team')</code>. L'étape suivante est de dire à Django d'utiliser ce modèle comme paramétrage de nore modèle originel. Le code complet serait :</p>
+<pre><code class="python">from django.contrib import admin
+from chistera.models import *
+
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = ('name', 'team')
+
+admin.site.register(Project, ProjectAdmin)
+admin.site.register(ProductBacklog)
+admin.site.register(Sprint)
+admin.site.register(UserStory)
+admin.site.register(Team)
+</code></pre>
+
+<p>En actualisant l'interface d'administration, on obtient bien la liste que l'on souhaitait avoir 
+<img alt="Interface d'administration actualisée" src="http://www.formation-django.fr/media/images/cms/django-admin-ajout-colonnes.png" />
+Source <a href="http://formation-django.fr/framework-django/scaffolding/parametrage-avance-interface-admin.html">formation-django.fr</a></p>
+<p>La classe <code>admin.ModelAdmin</code> offre plein de possibilités de paramètrage de l'interface d'administration. Ainsi pour rajouter un champ qui permette de rechercher un projet par son nom, il suffit de rajouter l'attribut <code>search_fields = ('name',)</code> dans notre classe créée précédemment. Pour rajouter un tri des projets selon leur équipe assignée, il suffit de rajouter l'attribut <code>list_filter = ('team',)</code>.</p>
+<p>Avec tous ces ajouts notre fichier devient :</p>
+<pre><code class="python">from django.contrib import admin
+from chistera.models import *
+
+class ProjectAdmin(admin.ModelAdmin):
+    list_display = ('name', 'team')
+    search_fields = ('name',)
+    list_filter = ('team',)
+
+admin.site.register(Project, ProjectAdmin)
+admin.site.register(ProductBacklog)
+admin.site.register(Sprint)
+admin.site.register(UserStory)
+admin.site.register(Team)
+</code></pre>
+
+<p>En actualisant la page de gestion, on voit les changements qui se sont effectués :
+<img alt="Page d'admin mise à jour avec la recherche et le tri" src="http://www.formation-django.fr/media/images/cms/django-admin-filtre.png" />
+Source <a href="http://formation-django.fr/framework-django/scaffolding/parametrage-avance-interface-admin.html">formation-django.fr</a></p>
+<p>La documentation de Django contient l'ensemble des attributs qu'il est possible de renseigner afin de paramétrer l'interface d'administration, n'hésitez pas à aller la consulter.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
