@@ -34,7 +34,7 @@ Il s’agit d’une page Web classique avec quelques éléments spécifiques.
 - une balise ```<script>``` qui activent les plugins jQuery de Bootstrap. Ces plugins sont nécessaires pour animer les composants Bootstrap.
 
 Ouvrez cette page dans votre navigateur Web favori. Vous obtenez le résultat ci-dessous.
-![](images/1.png)
+![]( images/1.png )
 
 
 # Quelques composants de Bootstrap
