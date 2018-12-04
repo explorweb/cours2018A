@@ -67,7 +67,7 @@
 </li>
                                     
 <li >
-    <a href="../MenacesDuWeb/">Cours 2018</a>
+    <a href="../MenacesDuWeb/">La sécurité sur le web</a>
 </li>
                                     
 <li >
@@ -354,6 +354,11 @@ urlpatterns = patterns('',
 
 <p>Le contrôleur frontal est donc en place et permet le routage d'URL.</p>
 <h2 id="4-presentation-du-contenu-avec-les-templates">4 - Présentation du contenu avec les templates</h2>
+<p>Désormais, nous allons nous intéresser aux templates, qui nous permettent d’afficher des données.
+Pour se faire, Django permet d’utiliser des balises de gabarit, directement intégrées au framework. </p>
+<p>Tout d’abord, nous devons vous présenter les balises de template. Du fait que les navigateurs ne comprennent que l’HTML, on ne peut directement intégrer du code Python au sein d’un code HTML. Python est un langage dynamique contrairement à l’HTML, plutôt statique.</p>
+<p>Les balises de template Django servent à construire des sites web, au sein desquels on peut insérer du code ressemblant à du python. </p>
+<p>Pour afficher une variable dans un template, il faut utiliser des doubles accolades à l’intérieur desquelles on placera le nom de la variable : {{ posts }}</p>
 <h2 id="5-administration-du-projet-avec-le-scaffolding">5 - Administration du projet avec le scaffolding</h2>
 <h3 id="installation">Installation</h3>
 <p>Une des grandes forces de Django est de proposer la création très rapide d'une interface permettant d'administrer son site. Pour cela on va utiliser les fonctionnalités de <em>scaffolding</em> (littéralement <em>échaffaudage</em> ou <em>structure</em>) de Django.</p>
