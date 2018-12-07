@@ -209,6 +209,7 @@ Le contrôleur frontal est donc en place et permet le routage d'URL.
 
 ## 4 - Présentation du contenu avec les templates
 
+
 Commençons par présenter le moteur de templates de Dango, qui vous permettra d'écrire des vues de qualité. Ce moteur fait partie des nombreux points forts de Django qui le distinguent des autres frameworks de même type.
 Le langage de template permet la manipulation de variables au sein d'un contenu textuel. 
 
@@ -256,6 +257,15 @@ Bastien
 Amine
 ```
 Pour une liste plus détaillée des différentes fonctionnalités offertes par ce langage, n'hésitez pas à faire un tour sur la documentation officielle, ne serait que pour apprendre les extensions de templates.
+=======
+Désormais, nous allons nous intéresser aux templates, qui nous permettent d’afficher des données.
+Pour se faire, Django permet d’utiliser des balises de gabarit, directement intégrées au framework. 
+
+Tout d’abord, nous devons vous présenter les balises de template. Du fait que les navigateurs ne comprennent que l’HTML, on ne peut directement intégrer du code Python au sein d’un code HTML. Python est un langage dynamique contrairement à l’HTML, plutôt statique.
+
+Les balises de template Django servent à construire des sites web, au sein desquels on peut insérer du code ressemblant à du python. 
+
+Pour afficher une variable dans un template, il faut utiliser des doubles accolades à l’intérieur desquelles on placera le nom de la variable : {{ posts }}
 
 ## 5 - Administration du projet avec le scaffolding
 

@@ -10,6 +10,17 @@ Il est donc à la fois support de cours, défini de manière collaborative, et l
 ## Objectifs du cours
 Explorer ce qu'est le web, ses fondements, les techniques sous-jacentes, des outils, et les usages.
 
+# Contenus proposés par les étudiants
+1. [Les bases de HTML5 et de CSS3 !](cours/html.md)
+1. [Recherche sur le Web](cours/Recherche_sur_le_Web.md)
+1. [Web Profond](cours/deepweb.md)
+1. [Sécurité sur le Web](cours/MenacesDuWeb.md)
+1. [Initiation au Javascript](cours/javascript.md)
+1. [Bootstrap](cours/Bootstrap.md)
+1. [Django](cours/django.md)
+1. [Sessions précédentes](cours/index.md)
+
+
 # Présentation du cours
 Présentation du cours en quelques diapositives :
 <iframe src="//www.slideshare.net/slideshow/embed_code/key/nNUgizR6I3FFpP" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong>

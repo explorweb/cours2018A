@@ -6,8 +6,10 @@ nav:
   - Cours:
       - cours/html.md
       - cours/Recherche_sur_le_Web.md
-      - cours/javascript.md
       - cours/deepweb.md
+      - cours/MenacesDuWeb.md
+      - cours/javascript.md
+      - cours/Bootstrap.md
       - cours/django.md
       - Sessions précédentes: cours/index.md
   - Contribuer:
