@@ -70,7 +70,8 @@ Au début , le but des crawlers était de cartographier  le web , et le contenu 
 Le mot vient de l'anglais 'scrape' qui signifie gratter. L'idée est donc de gratter des pages web pour récolter l'information voulue. Cela revient à faire des copier coller. Cependant le scraping est en général assuré par des bots, ou robots, qui s’occupent de ce travail périodiquement.
 
 ![](https://i.imgur.com/Uo6IN8q.png) 
-Principe en image. :http://www.luxury-concept.com/dev-blog/346-le-scaping-des-donnees-pourquoi-et-comment.html*
+
+*Principe en image. :http://www.luxury-concept.com/dev-blog/346-le-scaping-des-donnees-pourquoi-et-comment.html*
 
 Le principe de base du scraping est simple : transformer des informations non structurées présentes dans des pages web en données structurées facilement exploitables. On désigne par scraper le nom du programme qui effectue cette action.
 
