@@ -3,7 +3,15 @@ site_description: Cours participatif sur le Web.
 site_author: Etudiants participant au cours.
 nav:
   - Home: index.md
-  - Cours: cours/index.md
+  - Cours:
+      - cours/html.md
+      - cours/Recherche_sur_le_Web.md
+      - cours/deepweb.md
+      - cours/MenacesDuWeb.md
+      - cours/javascript.md
+      - cours/Bootstrap.md
+      - cours/django.md
+      - Sessions précédentes: cours/index.md
   - Contribuer:
       - Définir le contenu : contribuer/contenu.md
       - Comment réaliser du contenu : contribuer/realiser.md
@@ -16,7 +24,8 @@ nav:
       - Séance 4: deroule/seance4.md
       - Séance 5: deroule/seance5.md
       - Séance 6: deroule/seance6.md
-
+      - Séance 9: deroule/seance9.md
+      - Séance 12: deroule/seance12.md
   - A propos: about/about.md
 
 extra_css: [extra.css]
