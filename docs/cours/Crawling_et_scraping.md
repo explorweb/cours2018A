@@ -126,7 +126,8 @@ En visualisant la page et avec de simples copier/coller, un utilisateur peut ré
      Scrapy est un framework collaboratif et open-source pour extraire des données. Il est rapide, et facilement extensible, mais il s’adresse aux développeurs ayant des connaissances en python et connaissant XPath. Le framework possède en plus une documentation extensive pour comprendre son fonctionnement. Parmi les composants du framework – scrapy engine, scheduler, downloader, spiders, item pipeline -, seuls les spiders sont à écrire par l’utilisateur.
      Les spiders sont des scripts appelant les différents composants qui spécifient où scraper les données, quoi scraper et comment le faire.
 Les données, sous la forme d’item, peuvent être exportées sous un format spécifique avec un peu de programmation.
-![](https://i.imgur.com/4vrwZhv.png)                      *Fonctionnement de scrapy  http://www.luxury-concept.com/dev-blog/346-le-scaping-des-donnees-pourquoi-et-comment.html*
+![](https://i.imgur.com/4vrwZhv.png)                     
+*Fonctionnement de scrapy  http://www.luxury-concept.com/dev-blog/346-le-scaping-des-donnees-pourquoi-et-comment.html*
 
    Scrapy est donc un excellent outil pour scraper des données, quoiqu’il s’adresse à des utilisateurs avancés. 
 
