@@ -30,8 +30,8 @@ L'indexation désigne l'action d'un programme utilisé par un moteur de recherch
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Deepweb_graphical_representation.svg/800px-Deepweb_graphical_representation.svg.png)  
 Source:Wikimedia
 
-### II- LE DEEP WEB OU WEB PROFOND:
-**II.1-  COMMENT ACCEDER AU DEEP WEB?**  
+### II-Fonctionnement de Tor: 
+Avant de voir ce que c'est que TOR, il convient de s'intéresser aux notions de VPN et de Proxy.  
 
 *VPN:*  
 
@@ -77,12 +77,13 @@ Par exemple, il est possible de choisir parmi les quelques milliers de drogues p
 ![](https://upload.wikimedia.org/wikipedia/en/4/42/Silk_Road_Marketplace_Item_Screen.jpg)  
 source: Wikimedia
 
-* Silkroad une plateforme d’e-commerce appartenant au Deep Web pose un gros problème aux forces de l’ordre vue que premièrement il n’y a pas de trace postale : adresse cryptée connue que par le marchand, deuxièmement il n’y a pas de trace digitale : Tor presque intraçable et enfin et surtout il n’y a pas de trace de transaction monétaire : les bitcoins passent de compte en compte sans arrêt et sont impossible à suivre.
+* **Silkroad** est une plateforme d’e-commerce du darknet. Elle pose un gros problème aux forces de l’ordre vu que ,premièrement, il n’y a pas de trace postale (adresse cryptée connue que par le marchand), deuxièmement, il n’y a pas de trace digitale : Tor est presque intraçable et enfin, il n’y a pas de trace de transaction monétaire : les bitcoins passent de compte en compte sans arrêt et il est impossible de les suivre.
 Les fondateurs de Silkroad ont décidé d’ouvrir the Armory, car comme bons entrepreneurs, ils cherchent à se diversifier. Mêmes principes les vendeurs proposent dans cette plateforme des biens qui sont des armes.
 On peut donc selon les stocks acheter un AK-47, que l’on pourra se faire livrer par la poste, ou en dead-drop (on donne des références GPS et le vendeur pose/enterre/cache le produit aux coordonnées).  
-* Le deep Web ne se limite pas uniquement sur Silkroad, mais on fait assez de découvertes en passant de lien en lien.
-on peut également trouver de petites annonces de tueurs  avec des tarifs différenciés selon les tâches demandées et selon le type de personne : prenons comme exemple 10 000 euros pour une personne normale, 50 000 pour les politiciens...de plus, on peut acheter des numéros de cartes bancaires ou de “clones” avec le code PIN  dans le but de l’utiliser en magasin ou pour des retraits.  
-En outre, on peut également acheter un diplôme: avec inscription dans la base de données de l’école concernée, faire des faux papiers, faire disparaître une personne de tout base de donnée (de son compte en banque, de la sécurité sociale)...   
+
+* D'autres plateformes illégales existent sur le dark web telles que le forum **« Black Hand »**(« La main noire »), qui proposait à la vente depuis plus de deux ans de nombreux produits et services illicites (stupéfiants, armes, faux papiers, données bancaires volées…). Il a été démantelé à l’issue d’une vaste opération menée par les douanes en Juin 2018 [6].  
+* En  passant de lien en lien dans le deep web, on peut également trouver des annonces de tueurs  avec des tarifs différenciés selon les tâches demandées et selon le type de personne : prenons comme exemple 10 000 euros pour une personne normale, 50 000 pour les politiciens...de plus, on peut acheter des numéros de cartes bancaires ou de “clones” avec le code PIN  dans le but de l'utiliser en magasin ou pour des retraits.  
+En outre, il est possible d'acheter un diplôme avec inscription dans la base de données de l’école concernée, faire des faux papiers, faire disparaître une personne de toute base de donnée (de son compte en banque, de la sécurité sociale)...  
 
 ## Aspect juridique du deep web :  
 
@@ -142,8 +143,10 @@ A présent vous savez comment explorer le deep web!
   1-Article sur Wikipédia: Le web surfacique disponible sur https://en.wikipedia.org/wiki/Surface_web  
   2-Article sur Investopedia: Deep web disponible sur https://www.investopedia.com/terms/d/deep-web.asp  
   3-Article sur Wikipédia:Darknets disponible sur https://en.wikipedia.org/wiki/Darknet#Uses   
-  4-Article sur wikipédia :VPN https://fr.wikipedia.org/wiki/R%C3%A9seau_priv%C3%A9_virtuel   
-  5-Tutoriel sur Openclassrooms https://openclassrooms.com/fr/courses/2939276-surfez-incognito-sur-internet-avec-le-reseau-tor/2954671-vers-un-debut-danonymat-notion-de-proxy   
-  6-Le deep web https://www.supinfo.com/articles/single/3109-deep-web    
-  7-Fonctionnalités de Tor https://meilleurvpn.net/19119/navigateur-tor/  
-  8-COMMENT ACCEDER AU WEB INVISIBLE (DEEP WEB) EN TOUTE SECURITE http://jacquesgoueth.blogspot.com/2015/07/comment-acceder-au-web-invisible-deep.html  
+  4-Article sur wikipédia :VPN https://fr.wikipedia.org/wiki/R%C3%A9seau_priv%C3%A9_virtuel  
+  5-Article sur Wikipédia : Silk road https://fr.wikipedia.org/wiki/Silk_road
+  6-Article de presse:« Dark web » : une plateforme illégale française démantelée https://www.ouest-france.fr/societe/faits-divers/dark-web-une-plateforme-illegale-francaise-demantelee-5828320
+  7-Tutoriel sur Openclassrooms https://openclassrooms.com/fr/courses/2939276-surfez-incognito-sur-internet-avec-le-reseau-tor/2954671-vers-un-debut-danonymat-notion-de-proxy   
+  8-Le deep web https://www.supinfo.com/articles/single/3109-deep-web    
+  9-Fonctionnalités de Tor https://meilleurvpn.net/19119/navigateur-tor/  
+  10-COMMENT ACCEDER AU WEB INVISIBLE (DEEP WEB) EN TOUTE SECURITE http://jacquesgoueth.blogspot.com/2015/07/comment-acceder-au-web-invisible-deep.html  
