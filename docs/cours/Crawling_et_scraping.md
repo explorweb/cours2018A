@@ -45,6 +45,7 @@ Avant d'acceder à un site web pour la première fois , le crawler télécharge 
  ### 1.3 Architecture physique
 Pour augmenter les performances des crawlers face à une croissance exponnontielle du nombre de pages web , le stockage des pages est séparé entre plusieurs machines , situées dans des lieux géographiques différents . 
 Cependant il faut s'assurer que les sites visités par chaque machine sont bien disjoint ce qui peut se faire en repartissant les espaces des adresses web![](https://i.imgur.com/OBQ2iyj.jpg)
+
 Dans ce cas, le crawler en lui-même n’utilise qu’une seule machine mais plusieurs interfaces
 réseau afin de bénéficier d’une plus grande capacité de téléchargement.Le stockage des
 informations récoltées est effectué sur plusieurs machines différentes accessibles en réseau
