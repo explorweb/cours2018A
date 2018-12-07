@@ -52,6 +52,7 @@ informations récoltées est effectué sur plusieurs machines différentes acces
 local.
 ### 1.4 Architécture logicielle
 ![](https://i.imgur.com/Let43Sx.jpg)
+
 L'ordonnanceur sert à prioritiser certaines adresses et permet de mieux gerer les temps mort entre les telechargements
 exemple : grouper les pages d’un même site web et utiliser le temps nécessaire à leur téléchargement pour émettre les requêtes de résolution DNS des URLs qui suivent dans la file. 
 Au début , le but des crawlers était de cartographier  le web , et le contenu des pages n'était utilisé que pour récuperer les autres URL mais par la suite les appliactions utilisant ces données ont progresser et le contenu est devenu analysé , notamment à des fins d'indexation .c’est la naissance des moteurs de recherche.
@@ -69,7 +70,7 @@ Au début , le but des crawlers était de cartographier  le web , et le contenu 
 Le mot vient de l'anglais 'scrape' qui signifie gratter. L'idée est donc de gratter des pages web pour récolter l'information voulue. Cela revient à faire des copier coller. Cependant le scraping est en général assuré par des bots, ou robots, qui s’occupent de ce travail périodiquement.
 
 ![](https://i.imgur.com/Uo6IN8q.png) 
-* Principe en image. :http://www.luxury-concept.com/dev-blog/346-le-scaping-des-donnees-pourquoi-et-comment.html*
+Principe en image. :http://www.luxury-concept.com/dev-blog/346-le-scaping-des-donnees-pourquoi-et-comment.html*
 
 Le principe de base du scraping est simple : transformer des informations non structurées présentes dans des pages web en données structurées facilement exploitables. On désigne par scraper le nom du programme qui effectue cette action.
 
