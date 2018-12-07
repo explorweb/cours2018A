@@ -13,6 +13,8 @@ N'hésitez pas à proposer ici des références intéressantes
 À vous de jouer :-)
 
 - [Cours sur la recherche web](Recherche_sur_le_Web.md)
+- [Cours sur le Crawling et le Scraing](Crawling_et_scraping.md)
+
 
 #Sessions Précédentes
 ## [Le cours du semestre de printemps 2018](https://explorweb.github.io/cours2018/)
