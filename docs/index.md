@@ -18,6 +18,7 @@ Explorer ce qu'est le web, ses fondements, les techniques sous-jacentes, des out
 1. [Initiation au Javascript](cours/javascript.md)
 1. [Bootstrap](cours/Bootstrap.md)
 1. [Django](cours/django.md)
+1. [Rampant et Grattant](cours/Crawling_et_scraping.md)
 1. [Sessions précédentes](cours/index.md)
 
 
