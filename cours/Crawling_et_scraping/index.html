@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Etudiants participant au cours.">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Crawling et scrapping - Exploration du Web</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link href="../../extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">Exploration du Web</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cours <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../html/">Les bases de HTML5 et CSS3 !</a>
+</li>
+                                    
+<li >
+    <a href="../Recherche_sur_le_Web/">Recherche sur le Web</a>
+</li>
+                                    
+<li >
+    <a href="../deepweb/">Cours sur le web profond</a>
+</li>
+                                    
+<li >
+    <a href="../MenacesDuWeb/">La sécurité sur le web</a>
+</li>
+                                    
+<li >
+    <a href="../javascript/">Initiation au Javascript</a>
+</li>
+                                    
+<li >
+    <a href="../Bootstrap/">Présentation Bootstrap</a>
+</li>
+                                    
+<li >
+    <a href="../django/">Django le framework !</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">Crawling et scrapping</a>
+</li>
+                                    
+<li >
+    <a href="../">Sessions précédentes</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contribuer <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../contribuer/contenu/">Définir le contenu</a>
+</li>
+                                    
+<li >
+    <a href="../../contribuer/realiser/">Comment réaliser du contenu</a>
+</li>
+                                    
+<li >
+    <a href="../../contribuer/progresser/">Comment progresser</a>
+</li>
+                                    
+<li >
+    <a href="../../contribuer/outils/">Les outils utilisés</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Déroulé <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../deroule/seance1/">Séance 1</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance2/">Séance 2</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance3/">Séance 3</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance4/">Séance 4</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance5/">Séance 5</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance6/">Séance 6</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance9/">Séance 9</a>
+</li>
+                                    
+<li >
+    <a href="../../deroule/seance12/">Séance 12</a>
+</li>
+                                </ul>
+                            </li>
+                            <li >
+                                <a href="../../about/about/">A propos</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../django/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#crawling-et-scrapping">Crawling et scrapping</a></li>
+            <li><a href="#plan-du-cours">Plan du cours</a></li>
+            <li><a href="#intro">Intro :</a></li>
+            <li><a href="#1-le-crawling">1. Le Crawling  :</a></li>
+            <li><a href="#2le-scraping">2.Le Scraping</a></li>
+            <li><a href="#apect-juridique">Apect juridique</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#references">Références :</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="crawling-et-scrapping">Crawling et scrapping</h1>
+<h2 id="plan-du-cours">Plan du cours</h2>
+<p>Introduction</p>
+<p>I) Le Crawling</p>
+<ol>
+<li>définition et fonctionnement</li>
+<li>limites des performances</li>
+<li>architecture physique</li>
+<li>architecture logicielle</li>
+</ol>
+<p>II) Le Scraping</p>
+<ol>
+<li>définition et fonctionnement</li>
+<li>limites</li>
+<li>architecture</li>
+<li>utilisation</li>
+</ol>
+<p>III) Aspect juridique</p>
+<p>Conclusion
+Réféfences</p>
+<h2 id="intro">Intro :</h2>
+<p>Depuis la création du web le nombre des sites web connaît une croissance exponentielle  , et on estime actuellement  que ce nombre a depassé la barre des 1 milliards . L'abondance de l’information sur internet est donc un fait mais accéder à l’information rapidement et avec précision s'avère etre le challenge à relever  </p>
+<h2 id="1-le-crawling">1. Le Crawling  :</h2>
+<h3 id="11-definition-et-fonctionnement">1.1   Definition et fonctionnement</h3>
+<p>Originellement le web crawling est une technique qui permet d'explorer le web en parcourant les differentes pages afin d'en établir la cartographie .Le premier web crawler (world wide web wanderer) était utilisé pour mesurer la croissance du web . 
+ Conceptuellement , l'algorithme supportant un crawler est simple et n'utilise qu'une seule structure de données qu'est les url . 
+En prenant un nombre d'adresse de sites préalablment connues comme base (candidats initiaux) , le programme consulte les differentes pages et retrouve les liens qu'elle contient . 
+Ensuite , pour chaque lien l'algorithme verifie si l'adresse est deja connues , si non il rajoute l'adresse à l'ensemble de pages à visiter et elle fera partie du prochain lot à consulter .
+Le processus est alors répété plusieurs fois.</p>
+<h3 id="12-limites-des-performances">1.2 Limites des performances</h3>
+<p>Tout d’abord,le nombre de pages crawlées est limité par la bande passante et l’éspace disque. On éstime aujourd’hui à 10^10 pages indexées par
+Google. Si une page fait en moyenne une taille  de 15kB, il faudrait 4 millions de dollars pour récupérer et stocker tout le Web. Pour maintenir une base relativement à jour, un crawler doit donc
+télécharger chaque seconde un nombre de pages pouvant atteindre plusieurs milliers
+De plus les pages sont dynamiques et en perpetuel changement , il est donc essentiel de verifier et mettre à jour les pages déja visitées . 
+On souligne aussi les manoeuvre de protection commercialisées par des entreprise pour se proteger des crawlers . par exemple le fichier “robots.txt” ou la balise HTML “meta robots”sont des outils utilisé pour specifier au crawler quelles pages visiter. 
+Avant d'acceder à un site web pour la première fois , le crawler télécharge le fichier robot.txt où sont specifiées les pages à ne pas télécharger .Cependant , le crawler peut decider de l'ignorer. De façon général les moteurs de recherche respecte cette convention.
+ ### 1.3 Architecture physique
+Pour augmenter les performances des crawlers face à une croissance exponnontielle du nombre de pages web , le stockage des pages est séparé entre plusieurs machines , situées dans des lieux géographiques différents . 
+Cependant il faut s'assurer que les sites visités par chaque machine sont bien disjoint ce qui peut se faire en repartissant les espaces des adresses web<img alt="" src="https://i.imgur.com/OBQ2iyj.jpg" /></p>
+<p>Dans ce cas, le crawler en lui-même n’utilise qu’une seule machine mais plusieurs interfaces
+réseau afin de bénéficier d’une plus grande capacité de téléchargement.Le stockage des
+informations récoltées est effectué sur plusieurs machines différentes accessibles en réseau
+local.</p>
+<h3 id="14-architecture-logicielle">1.4 Architécture logicielle</h3>
+<p><img alt="" src="https://i.imgur.com/Let43Sx.jpg" /></p>
+<p>L'ordonnanceur sert à prioritiser certaines adresses et permet de mieux gerer les temps mort entre les telechargements
+exemple : grouper les pages d’un même site web et utiliser le temps nécessaire à leur téléchargement pour émettre les requêtes de résolution DNS des URLs qui suivent dans la file. 
+Au début , le but des crawlers était de cartographier  le web , et le contenu des pages n'était utilisé que pour récuperer les autres URL mais par la suite les appliactions utilisant ces données ont progresser et le contenu est devenu analysé , notamment à des fins d'indexation .c’est la naissance des moteurs de recherche.</p>
+<h2 id="2le-scraping">2.Le Scraping</h2>
+<h3 id="21-definition-fonctionnement">2.1 Definition &amp; fonctionnement</h3>
+<p>Le mot vient de l'anglais 'scrape' qui signifie gratter. L'idée est donc de gratter des pages web pour récolter l'information voulue. Cela revient à faire des copier coller. Cependant le scraping est en général assuré par des bots, ou robots, qui s’occupent de ce travail périodiquement.</p>
+<p><img alt="" src="https://i.imgur.com/Uo6IN8q.png" /> </p>
+<p><em>Principe en image. :http://www.luxury-concept.com/dev-blog/346-le-scaping-des-donnees-pourquoi-et-comment.html</em></p>
+<p>Le principe de base du scraping est simple : transformer des informations non structurées présentes dans des pages web en données structurées facilement exploitables. On désigne par scraper le nom du programme qui effectue cette action.</p>
+<p>Contrairement à un crawler (programme vu plus haut) qui découvre lui-même les sites parcourus et les pages web téléchargées, le scraper travaille sur un site ou ensemble de sites connus par avance. Le scraper pourra alors être  paramétré de façon à récupérer les données
+souhaitées sur le site en question ou bien un programme développé spécifiquement pour cette tâche et donc parfaitement adapté au site. </p>
+<p>Les avantages sont donc :</p>
+<p>-Automatiser cette action qui est fastidieuse pour un humain.</p>
+<p>-Possibilité de structurer nos données sortantes.</p>
+<p>-Possiblité de choisir le format des données sortantes.</p>
+<p>Par exemple dans l'exemple ci contre ou l'on illustre un exemple de scrapping possible sur une page du <a href="https://www.lemonde.fr/">Monde</a>.</p>
+<p><img alt="" src="https://i.imgur.com/TASipK5.png" /></p>
+<h3 id="22-limites-du-scraping">2.2 Limites du scraping :</h3>
+<p>Le support de travail des scrapers étant le même que les crawlers, les pages web, on
+retrouve les mêmes limites que précédemment. De plus le scraping est plus contraingant que le crawling car nécessite de connaître au préalable l'architecture du site. Il existe d'ailleurs des mesures spécifiques pour l’empêcher.
+Certains sites changent régulièrement la structure du code html de leurs pages. S’il est
+possible que cela ne change rien visuellement dans un navigateur web, cela va empêcher le
+programme d’en extraire les données. Bien entendu, le créateur du scraper pourra toujours
+le corriger pour prendre en compte les modifications mais il ne sera pas à l’abri d’autres changements. Cela en revanche ne perturbe pas le travail d'un crawler.</p>
+<h3 id="23-architecture">2.3 Architecture</h3>
+<p>Contrairement aux crawlers pour lesquels le domaine exploré est possiblement illimité, les scrapers sont destinés à agir sur un nombre réduit et connu par avance de sites
+web. S’il sera possible de rencontrer des crawlers utilisant un parc de plusieurs milliers de machines, un scraper n’aura en général besoin que d’une seule machine, en tout cas pour la
+partie chargée du téléchargement des données.</p>
+<h3 id="24-utilisation">2.4 Utilisation</h3>
+<p>Les moyens employés pour scrapper sont variés en raison des larges possibilités que propose le scrapping. Il y a des logiciels, des frameworks ainsi que des librairies, des addons mise à disposition. En Voici plusieurs exemples :</p>
+<ol>
+<li>
+<p>Via navigateur : 
+En visualisant la page et avec de simples copier/coller, un utilisateur peut récupérer les données d’une ou plusieurs pages afin de les réutiliser dans un autre contexte, ce qui correspond à la définition du scraping. Bien entendu c'est trop fastidieux, il existe donc des addons pour ce faire (ex : <a href="https://www.downthemall.net/">DownThemAll</a> pour Firefox). </p>
+</li>
+<li>
+<p>Via un logiciel : </p>
+<p>Import.io : logiciel disponible en ligne est très simple d'utilisation mais très limité. Il permet, selon une liste d’URL de page web, de scraper automatiquement toute l’information. Celle-ci est alors disponible sous la forme d’un tableau exportable en .csv, .xlmls ou .sheets pour analyse. Import.io est très simple et ne demande pas de connaissances en programmation.</p>
+</li>
+<li>
+<p>Via un framework : </p>
+<p>Scrapy est un framework collaboratif et open-source pour extraire des données. Il est rapide, et facilement extensible, mais il s’adresse aux développeurs ayant des connaissances en python et connaissant XPath. Le framework possède en plus une documentation extensive pour comprendre son fonctionnement. Parmi les composants du framework – scrapy engine, scheduler, downloader, spiders, item pipeline -, seuls les spiders sont à écrire par l’utilisateur.
+ Les spiders sont des scripts appelant les différents composants qui spécifient où scraper les données, quoi scraper et comment le faire.
+Les données, sous la forme d’item, peuvent être exportées sous un format spécifique avec un peu de programmation.
+<img alt="" src="https://i.imgur.com/4vrwZhv.png" />                   <br />
+<em>Fonctionnement de scrapy  http://www.luxury-concept.com/dev-blog/346-le-scaping-des-donnees-pourquoi-et-comment.html</em></p>
+</li>
+</ol>
+<p>Scrapy est donc un excellent outil pour scraper des données, quoiqu’il s’adresse à des utilisateurs avancés. </p>
+<ol>
+<li>Les libraires
+La plupart des langages de programmation disposent au moins d’une librairie basique permettant de travailler avec le web.
+-PHP : <a href="https://github.com/FriendsOfPHP/Goutte">Goutte</a> 
+-Java : <a href="https://jaunt-api.com/">Jaunt</a>
+-Python : <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautiful Soup</a></li>
+</ol>
+<p>Mise en oeuvre : </p>
+<p>Voici un tuto très simple utilisant la bibliothèque <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Beautiful Soup</a> de python. Et qui a pour finalité d'extraire des données de wikipedia 
+https://code.tutsplus.com/fr/tutorials/scraping-webpages-in-python-with-beautiful-soup-the-basics--cms-28211</p>
+<h2 id="apect-juridique">Apect juridique</h2>
+<p>Nous venons de voir les différents concepts et technique sur les façon de récuperer des données sur internet. Il reste à se questionner sur la réglementation de ces pratique.</p>
+<p>Premièrement il faut bien comprendre que scraper ou crawaler n'a pas pour but de voler des données. L'idée est plus de récupérer de manière périodique des données sur un site. Ces dernières osnt en grande partie accessible à un utilisateur qui naviguerait de manière régulière sur le site. L'intérêt de ces pratiques et donc d'automatiser et de structurer les données. Ce qui fait que cette activité n'est pas illégale, cette pratique est même facilité et mise à disposition sur plusieurs site.</p>
+<p>Cependant, il reste normal que des entreprises possédant des sites ne veuillent pas laisser certaines donnée en libre récolte à leur concurrents. Pour se défendre on peut rédiger des conditions d'utilisation plus ou moins strictes, ces dernières doivent être claires et visibles. Mais il est très difficile d'interdire totalement le scraping et il s'agit donc en géneral d'en faire une utilisation prudente et peu instrusive.</p>
+<p>Il y a un manque certain dans la réglementation pour définir ce qui est autorisé et ce qui est
+interdit. Internet est un outil encore trop jeune et son développement est tellement rapide qu’il est impossible que la juridiction suive le rythme. </p>
+<p>Certaines entreprises qui sont sans défense d’un point de vue légal se tournent vers une protection technique. <a href="https://www.imperva.com/">Impreva</a> propose un outil qui détecte et bloque les accès automatisés. Cependant certaines de leurs solutions peuvent rendre un site web peu ergonomique. Comme l'utilisation de CAPTCHA, qui souvent est peu appréciée par les internautes.</p>
+<p>Dans le cadre de l'open data, il y a une réglementation plus rigoureuse. Il est indispensable de vérifier la provenance des données et le cadre juridique dans lequel se place son propriétaire. Au sein des pays
+membres de l’UE, les données du secteur publique sont réutilisables pour un coût très faible ou nul depuis une directive de décembre 2011. 
+Pour terminer, la finalité d’une action détermine le caractère publique d’une information : les données produites par un opérateur privé dans le cadre d’une mission de service publique, sont des données publiques, à l’exception des missions industrielles, commerciales et de sécurité nationale.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>La taille du Web ne cesse de grossir, et les technologies qui l'entourent se multiplient. Les données sont aujourd'hui le nouveau pétrole et peuvent être un moyen considérable d'expansion pour les entreprises. 
+Le crawling, le scraping et l’open data n’en sont qu’au début d’une croissance certaine. Cependant, il faut savoir rester prudent car la quantité d’information est telle qu’il serait très facile de s’y perdre. De nouvelles problématiques se posent pour pouvoir gérer et réglementer cette masse de données.</p>
+<h2 id="references">Références :</h2>
+<ol>
+<li>http://www.luxury-concept.com/dev-blog/346-le-scaping-des-donnees-pourquoi-et-comment.html</li>
+<li>https://code.tutsplus.com/fr/tutorials/scraping-webpages-in-python-with-beautiful-soup-the-basics--cms-28211</li>
+<li>https://www.downthemall.net/
+http://stanford.edu/~wpmarble/webscraping_tutorial/webscraping_tutorial.pdf</li>
+<li>https://zestedesavoir.com/billets/2057/scraper-des-donnees-sur-une-page-web-en-python-avec-beautifulsoup-1/</li>
+<li>http://www.acme.byu.edu/wp-content/uploads/2017/08/WebScraping2.pdf</li>
+<li>http://www.acme.byu.edu/2018-2019-materials/</li>
+<li>https://yanfei.site/docs/dpsa/references/PyWebScrapingBook.pdf</li>
+<li>http://stanford.edu/~wpmarble/webscraping_tutorial/webscraping_tutorial.pdf</li>
+</ol></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

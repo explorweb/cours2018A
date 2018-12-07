@@ -83,6 +83,10 @@
 </li>
                                     
 <li >
+    <a href="../Crawling_et_scraping/">Crawling et scrapping</a>
+</li>
+                                    
+<li >
     <a href="../">Sessions précédentes</a>
 </li>
                                 </ul>
@@ -162,7 +166,7 @@
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../">
+                                <a rel="prev" href="../Crawling_et_scraping/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -180,12 +184,13 @@
             <li><a href="#2-types-de-frameworks">2 - Types de frameworks</a></li>
             <li><a href="#3-frameworks-quels-avantages-et-quels-inconvenients">3 - Frameworks : Quels avantages et quels inconvénients ?</a></li>
             <li><a href="#4-django-cest-quoi">4 - Django, c'est quoi ?</a></li>
-            <li><a href="#5-mvcmvt">5-MVC/MVT:</a></li>
+            <li><a href="#5-design-pattern-mvcmvt">5 - Design pattern MVC/MVT</a></li>
         <li class="main "><a href="#ii-creer-son-premier-projet-sur-django">II - Créer son premier projet sur Django</a></li>
             <li><a href="#1-creer-un-projet-et-une-premiere-application">1 - Créer un projet et une première application</a></li>
             <li><a href="#2-conception-des-premiers-modeles">2 - Conception des premiers modèles</a></li>
             <li><a href="#3-le-traitement-des-donnees-avec-les-vues-et-le-routage-durl">3 - Le traitement des données avec les vues et le routage d'URL</a></li>
             <li><a href="#4-presentation-du-contenu-avec-les-templates">4 - Présentation du contenu avec les templates</a></li>
+        <li class="main "><a href="#pour-une-liste-plus-detaillee-des-differentes-fonctionnalites-offertes-par-ce-langage-nhesitez-pas-a-faire-un-tour-sur-la-documentation-officielle-ne-serait-que-pour-apprendre-les-extensions-de-templates">Pour une liste plus détaillée des différentes fonctionnalités offertes par ce langage, n'hésitez pas à faire un tour sur la documentation officielle, ne serait que pour apprendre les extensions de templates.</a></li>
             <li><a href="#5-administration-du-projet-avec-le-scaffolding">5 - Administration du projet avec le scaffolding</a></li>
     </ul>
 </div></div>
@@ -198,7 +203,7 @@
 <li>Types de frameworks</li>
 <li>Frameworks : Quels avantages et quels inconvénients ?</li>
 <li>Django, c'est quoi ?</li>
-<li>MVC/MVT</li>
+<li>Design pattern MVC/MVT</li>
 </ol>
 </li>
 <li>Créer son premier projet sur Django<ol>
@@ -228,20 +233,25 @@ Un framework permet de <strong>simplifier le travail des développeurs informati
 <h2 id="4-django-cest-quoi">4 - Django, c'est quoi ?</h2>
 <p>Django est l'un des  frameworks applicatifs Python destinés au développement d’applications web. Créé en 2003 dans une agence de presse, Lawrence Journal-World, le framework est proposé au grand public deux ans plus tard. En 2008, la fondation Django Software a été créée. Aujourd'hui, Django est très populaire. Il est utilisé dans des applications web très célèbres comme <em>Instagram</em> ou <em>Pinterest</em>.  </p>
 <p>Django permet le développement rapide de meilleures et plus performantes applications web. Il automatise des tâches répétitives  telles que l'écriture de requêtes destinées à une base de données. Il propose d'autres fonctionnalités comme une bibliothèque de traduction on un espace membres. </p>
-<h2 id="5-mvcmvt">5-<strong>MVC/MVT</strong>:</h2>
-<p>Le Modèle-vue-contrôleur ou MVC est un type d'architecture logicielle destiné aux interfaces graphiques lancé en 1978 et très populaire pour les applications web. Le motif est composé de trois types de modules assurant différents rôles:<br />
-   * Un modèle (Model) contient les données à afficher.
-   * Une vue (View) contient la présentation de l'interface graphique.<br />
-   * Un contrôleur (Controller) contient la logique concernant les actions effectuées par l'utilisateur. Source : <a href="https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur">Wikipédia</a><br />
-<img alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/MVC_Diagram_%28Model-View-Controller%29.svg" /><br />
-   source:<a href="https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur">MVC</a><br />
-   Django utilise l'architecture MVT (modèle-vue-template)qui s'inspire de MVC: <br />
-   * Le <strong>modèle</strong> interagit avec une base de données. Un <strong>ORM</strong> (Object Relational Mapping) traduit les réponses à une requête <a href="file:///C:/Users/admin/Documents/EGDownloads/Sql_1_Cours.pdf">SQL</a> ( langage de consultation de base de données) en <strong>objets Python</strong> exploitables par le programme.Tous les modèles sont réunis dans un fichier python <strong>models.py</strong>.<br />
-   * La <strong>vue</strong> reçoit <a href="https://openclassrooms.com/fr/courses/1118811-les-requetes-http">une requête HTTP</a> et renvoie une réponse HTTP convenable (par exemple si la requête est une interaction avec une base de données, la vue appelle un modèle pour récupérer les items demandés).Les vues se trouvent dans le fichier <strong>views.py</strong>
-   * Le <strong>template</strong> est un fichier <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1604361-votre-premiere-page-web-en-html">HTML</a> récupéré par la vue et envoyé au visiteur.<br />
-   La figure ci-dessous montre comment les différents composants de l'architecture MVC interagissent pour répondre à la requête d'un utilisateur.<br />
-<img alt="" src="https://camo.githubusercontent.com/2fd581466b72e4b92e5893ea842b0ee085fff68d/68747470733a2f2f646f63732e676f6f676c652e636f6d2f64726177696e67732f642f314c456f30356854445f45435a355647356f664d6468327434445f4c6769416e626c752d65305435386645342f7075623f773d39363026683d373230" /><br />
-   source: <a href="https://github.com/emencia/emencia-django-training/wiki/Mod%C3%A8le-MVT">github</a>  </p>
+<h2 id="5-design-pattern-mvcmvt">5 - Design pattern MVC/MVT</h2>
+<h3 id="introduction-aux-orm">Introduction aux ORM</h3>
+<p>Avant de voir les spécificités des design pattern MVC et MVT, il convient de s'intéresser aux ORM. C'est terme anglais signifiant <em>Object Relational Mapping</em>, littéralement <em>Mappage objet-relationnel</em>. Il s'agit d'un programme informatique qui se place entre la couche de stockage des données dans la base de données relationelle et la couche applicative. Elle permet une abstraction des données et une représentation sous forme d'objets. Ainsi dans la conception de notre application, nos informations seront stockées sous forme d'objets informatiques, et l'ORM s'occupera tout seul de la correspondance avec la base de données.</p>
+<h3 id="design-pattern-mvcmvt">Design pattern MVC/MVT</h3>
+<p>Un <em>design pattern</em>, ou <em>patron de conception</em> en français, est une façon de concevoir une application informatique qui est considérée comme bonne et efficace.</p>
+<p>Le <em>design pattern</em> Modèle-Vue-Contrôleur ou MVC est un type d'architecture logicielle destiné aux interfaces graphiques lancé en 1978 et très populaire pour les applications web. Le motif est composé de trois types de modules assurant différents rôles:<br />
+   * Le modèle (Model) représente, souvent sous forme d'objet, les données à utilisée par l'application et utilise un ORM pour l'interaction avec la base de données.
+   * La vue (View) contient la présentation des données via  une interface graphique.<br />
+   * Un contrôleur (Controller) contient la logique concernant les actions effectuées par l'utilisateur.</p>
+<p>L'idée importante dans ce design pattern est de séparer distinctement les tâches effectuées par les différents éléments. Ainsi la conception et la maintenance sont simplifiées.</p>
+<p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/MVC_Diagram_%28Model-View-Controller%29.svg" /><br />
+   Source : <a href="https://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur">Wikipédia:MVC</a>  </p>
+<p>Django utilise l'architecture MVT (modèle-vue-template) qui s'inspire de MVC: <br />
+   * Le <strong>modèle</strong> interagit avec une base de données via un ORM. Tous les modèles sont réunis dans un fichier python <code>models.py</code>.<br />
+   * La <strong>vue</strong> reçoit <a href="https://openclassrooms.com/fr/courses/1118811-les-requetes-http">une requête HTTP</a> et renvoie une réponse HTTP convenable (par exemple si la requête est une interaction avec une base de données, la vue appelle un modèle pour récupérer les items demandés). Les vues se trouvent dans le fichier <code>views.py</code>
+   * Le <strong>template</strong> est un fichier <a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1604361-votre-premiere-page-web-en-html">HTML</a> récupéré par la vue et envoyé au visiteur avec les données des modèles.  </p>
+<p>La figure ci-dessous montre comment les différents composants de l'architecture MVT de Django interagissent pour répondre à la requête d'un utilisateur. Ici le contrôleur ne correspond pas au contrôleur du MVC, mais à Django en lui même qui gère en interne tout ce qui est liée au choix de la vue à laquelle envoyer la requête HTTP,...
+   <img alt="" src="https://camo.githubusercontent.com/2fd581466b72e4b92e5893ea842b0ee085fff68d/68747470733a2f2f646f63732e676f6f676c652e636f6d2f64726177696e67732f642f314c456f30356854445f45435a355647356f664d6468327434445f4c6769416e626c752d65305435386645342f7075623f773d39363026683d373230" /><br />
+   Source: <a href="https://github.com/emencia/emencia-django-training/wiki/Mod%C3%A8le-MVT">GitHub</a>  </p>
 <h1 id="ii-creer-son-premier-projet-sur-django">II - Créer son premier projet sur Django</h1>
 <h2 id="1-creer-un-projet-et-une-premiere-application">1 - Créer un projet et une première application</h2>
 <p>Après avoir installé Django, nous pouvons créer un nouveau projet.
@@ -354,6 +364,47 @@ urlpatterns = patterns('',
 
 <p>Le contrôleur frontal est donc en place et permet le routage d'URL.</p>
 <h2 id="4-presentation-du-contenu-avec-les-templates">4 - Présentation du contenu avec les templates</h2>
+<p>Commençons par présenter le moteur de templates de Dango, qui vous permettra d'écrire des vues de qualité. Ce moteur fait partie des nombreux points forts de Django qui le distinguent des autres frameworks de même type.
+Le langage de template permet la manipulation de variables au sein d'un contenu textuel. </p>
+<p>Pour afficher une variable dans un template, il faut utiliser des doubles accolades à l’intérieur desquelles on placera le nom de la variable.</p>
+<p>Voici un bout de code d'exemple : </p>
+<pre><code class="django">Bonjour {{ nom }}
+</code></pre>
+
+<p>et maintenant le rendu</p>
+<pre><code>Bonjour Anthony
+</code></pre>
+
+<p>Le moteur de template permet également l'utilisation de nombreux filtres afin d'appliquer des traitements de mise en forme aux variables. Ces filtres sont appelés de la manière suivante, au sein des doubles accolades:</p>
+<pre><code class="django">{{ variable|filtre }}
+</code></pre>
+
+<p>Prenons un exemple pour éclaircir l'utilisation de ces filtres.
+Voici un bout de code d'exemple, </p>
+<pre><code class="django">Bonjour {{ nom|capfirst }}
+</code></pre>
+
+<p>et maintenant le rendu</p>
+<pre><code>Bonjour Anthony
+</code></pre>
+
+<p>Le filtre <code>capfirst</code> utilisé ici convertit le nom de la personne, qui a pour valeur "anthony" en "Anthony" avec majuscule.</p>
+<p>Comment fait on pour itérer cette méthode sur une liste? Nous allons pour cela utiliser la boucle <code>for</code> de Django, assez proche de celle proposée en Python.</p>
+<p>Voici un exemple de code.</p>
+<pre><code class="django">&lt;ul&gt;
+{% for personne in personnes %}
+    &lt;li&gt;{{ personne }}&lt;/li&gt;
+{% endfor %}
+&lt;/ul&gt;
+</code></pre>
+
+<p>et le rendu</p>
+<pre><code>Anthony
+Bastien
+Amine
+</code></pre>
+
+<h1 id="pour-une-liste-plus-detaillee-des-differentes-fonctionnalites-offertes-par-ce-langage-nhesitez-pas-a-faire-un-tour-sur-la-documentation-officielle-ne-serait-que-pour-apprendre-les-extensions-de-templates">Pour une liste plus détaillée des différentes fonctionnalités offertes par ce langage, n'hésitez pas à faire un tour sur la documentation officielle, ne serait que pour apprendre les extensions de templates.</h1>
 <p>Désormais, nous allons nous intéresser aux templates, qui nous permettent d’afficher des données.
 Pour se faire, Django permet d’utiliser des balises de gabarit, directement intégrées au framework. </p>
 <p>Tout d’abord, nous devons vous présenter les balises de template. Du fait que les navigateurs ne comprennent que l’HTML, on ne peut directement intégrer du code Python au sein d’un code HTML. Python est un langage dynamique contrairement à l’HTML, plutôt statique.</p>
